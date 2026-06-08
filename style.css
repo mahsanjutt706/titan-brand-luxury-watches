@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #111;
+}
+
+header {
+  background: #000;
+  color: white;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: red;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+.hero {
+  min-height: 70vh;
+  background: linear-gradient(120deg, #000, #b00000, #003d99);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+.hero p {
+  font-size: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background: red;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #007bff;
+}
+
+.products {
+  padding: 50px 40px;
+  text-align: center;
+}
+
+.products h2 {
+  font-size: 34px;
+  margin-bottom: 25px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.product {
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: 0.35s ease;
+  overflow: hidden;
+}
+
+.product:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+  border-color: #007bff;
+}
+
+.product img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #ddd;
+  transition: 0.4s ease;
+}
+
+.product:hover img {
+  transform: scale(1.08);
+}
+
+.product h3 {
+  color: #b00000;
+}
+
+.product p {
+  color: #333;
+}
+
+.product span {
+  color: #007bff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.order-btn {
+  margin-top: 12px;
+  background: #25D366;
+  color: white;
+  border: none;
+  padding: 11px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.order-btn:hover {
+  background: #128C7E;
+  transform: scale(1.08);
+}
+
+.page-buttons {
+  margin-bottom: 30px;
+}
+
+.page-buttons button {
+  background: #000;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  margin: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.page-buttons button:hover {
+  background: red;
+  transform: scale(1.08);
+}
+
+.watch-page {
+  display: none;
+}
+
+.watch-page.active {
+  display: block;
+}
+
+footer {
+  background: #000;
+  color: white;
+  text-align: center;
+  padding: 18px;
+  margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav a {
+    margin: 0 8px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+}
